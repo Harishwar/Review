@@ -1,0 +1,55 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mobsquad.review.InterestListActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:paddingLeft="16sp"
+        	android:paddingRight="16sp"
+        	android:paddingBottom="2sp">
+
+        <ListView
+            android:id="@+id/interestlist"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_alignParentTop="true" />
+            
+        </LinearLayout>
+    </ScrollView>
+    
+
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:paddingBottom="2sp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical" >   		
+        
+        <Button
+   		    android:id="@+id/interestListButton"
+   		    android:layout_width="match_parent"
+   		    android:layout_height="wrap_content"
+   		    android:background="#00ccff"
+            android:textColor="#fff"
+            android:textStyle="bold"
+   		    android:text="Okay" />
+        </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Review</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_dashboard">Review</string>
+    <string name="title_activity_interest_list">InterestListActivity</string>
+    <string name="title_activity_sign_up">Sign Up</string>
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+
+    <string-array name="interest_list">
+        <item>Arts / Crafts</item>
+        <item>Books</item>
+        <item>Electronics</item>
+        <item>Events</item>
+        <item>Fashion</item>
+        <item>Literature</item>
+        <item>Movies</item>
+        <item>Music</item>
+        <item>Sports</item>
+    </string-array>
+
+    <string name="title_activity_selected_interest">Selected Interest</string>
+
+</resources>
