@@ -3,7 +3,6 @@ package com.mobsquad.review;
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -12,66 +11,24 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
-import java.util.Timer;
-import java.util.TimerTask;
+public class MyFollowersActivity extends Activity {
 
-public class WelcomeScreenActivity extends Activity {
-
-	private long ldelay = 3000;
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_welcome_screen);
+		setContentView(R.layout.activity_my_followers);
 
-		/*if (savedInstanceState == null) {
+		if (savedInstanceState == null) {
 			getFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
-		}*/
-		
-		TimerTask task = new TimerTask(){
-
-			@Override
-			public void run() {
-				
-				Login();
-				
-				finish();
-				
-				
-				/* if (currentUser != null) {
-				  
-					mapMain();
-			    	Log.i("Success", "User Found");
-					
-					
-				} else {
-					login();
-			    	Log.i("Alert", "Please Login");
-				  
-				} */
-			}	
-		};
-		
-		Timer timer = new Timer();
-		timer.schedule(task, ldelay);
+		}
 	}
 
-	public void Login(){
-		Intent loginIntent = new Intent(this, LoginActivity.class)	;
-		startActivity(loginIntent);
-	}
-	
-	public void UserLoggedIn(){
-		Intent loggedInIntent = new Intent(this, DashboardActivity.class)	;
-		startActivity(loggedInIntent);
-	}
-/*
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.welcome_screen, menu);
+		getMenuInflater().inflate(R.menu.my_followers, menu);
 		return true;
 	}
 
@@ -86,10 +43,10 @@ public class WelcomeScreenActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
- */
+
 	/**
 	 * A placeholder fragment containing a simple view.
-	 *
+	 */
 	public static class PlaceholderFragment extends Fragment {
 
 		public PlaceholderFragment() {
@@ -98,10 +55,10 @@ public class WelcomeScreenActivity extends Activity {
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_welcome_screen,
+			View rootView = inflater.inflate(R.layout.fragment_my_followers,
 					container, false);
 			return rootView;
 		}
-	}*/
+	}
 
 }

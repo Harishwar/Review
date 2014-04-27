@@ -12,66 +12,50 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
-import java.util.Timer;
-import java.util.TimerTask;
+public class MyProfileActivity extends Activity {
 
-public class WelcomeScreenActivity extends Activity {
-
-	private long ldelay = 3000;
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_welcome_screen);
+		setContentView(R.layout.activity_my_profile);
 
-		/*if (savedInstanceState == null) {
+        Intent intent = getIntent();
+
+		if (savedInstanceState == null) {
 			getFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
-		}*/
-		
-		TimerTask task = new TimerTask(){
-
-			@Override
-			public void run() {
-				
-				Login();
-				
-				finish();
-				
-				
-				/* if (currentUser != null) {
-				  
-					mapMain();
-			    	Log.i("Success", "User Found");
-					
-					
-				} else {
-					login();
-			    	Log.i("Alert", "Please Login");
-				  
-				} */
-			}	
-		};
-		
-		Timer timer = new Timer();
-		timer.schedule(task, ldelay);
+		}
 	}
 
-	public void Login(){
-		Intent loginIntent = new Intent(this, LoginActivity.class)	;
-		startActivity(loginIntent);
-	}
+    public void openMyPosts(View view){
+
+        //Open Posts Activity
+        Intent intent = new Intent(this, MyPostsActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void openMyFollowers(View view){
+
+        //Open Followers Activity
+        Intent intent = new Intent(this, MyFollowersActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void openMyInterests(View view){
+
+        //Open Inerests Activity
+        Intent intent = new Intent(this, InterestListActivity.class);
+        startActivity(intent);
+
+    }
 	
-	public void UserLoggedIn(){
-		Intent loggedInIntent = new Intent(this, DashboardActivity.class)	;
-		startActivity(loggedInIntent);
-	}
-/*
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.welcome_screen, menu);
+		getMenuInflater().inflate(R.menu.my_profile, menu);
 		return true;
 	}
 
@@ -86,10 +70,10 @@ public class WelcomeScreenActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
- */
+
 	/**
 	 * A placeholder fragment containing a simple view.
-	 *
+	 */
 	public static class PlaceholderFragment extends Fragment {
 
 		public PlaceholderFragment() {
@@ -98,10 +82,10 @@ public class WelcomeScreenActivity extends Activity {
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_welcome_screen,
+			View rootView = inflater.inflate(R.layout.fragment_my_profile,
 					container, false);
 			return rootView;
 		}
-	}*/
+	}
 
 }

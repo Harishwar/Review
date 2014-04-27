@@ -13,7 +13,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true" >
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -21,7 +20,6 @@
             android:paddingLeft="16sp"
         	android:paddingRight="16sp"
         	android:paddingBottom="2sp">
-
         <ListView
             android:id="@+id/interestlist"
             android:layout_width="match_parent"

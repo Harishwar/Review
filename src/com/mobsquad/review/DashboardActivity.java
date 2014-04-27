@@ -5,6 +5,7 @@ import com.mobsquad.review.util.SystemUiHider;
 import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -118,8 +119,11 @@ public class DashboardActivity extends Activity implements OnQueryTextListener {
  
     @Override
     public boolean    onOptionsItemSelected       (MenuItem item) {
-        Toast.makeText(this, "Selected Item: " + item.getTitle(), Toast.LENGTH_SHORT).show();
-        return true;
+        //Toast.makeText(this, "Selected Item: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+        Intent intentSignUp = new Intent(this, MyProfileActivity.class);
+        startActivity(intentSignUp);
+        finish();
+    	return true;
     }
  
     // The following callbacks are called for the SearchView.OnQueryChangeListener

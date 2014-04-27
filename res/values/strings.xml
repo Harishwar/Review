@@ -25,5 +25,10 @@
     </string-array>
 
     <string name="title_activity_selected_interest">Selected Interest</string>
-
+    <string name="title_activity_my_profile">MyProfileActivity</string>
+    <string name="header_name">Test Profile</string>
+    <string name="description">Description</string>
+    <string name="title_activity_my_posts">MyPostsActivity</string>
+    <string name="title_activity_my_followers">MyFollowersActivity</string>
+    
 </resources>

@@ -70,6 +70,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mobsquad.review.InterestListActivity" />
         </activity>
+        <activity
+            android:name="com.mobsquad.review.MyProfileActivity"
+            android:label="@string/title_activity_my_profile" >
+        </activity>
+        <activity
+            android:name="com.mobsquad.review.MyFollowersActivity"
+            android:label="@string/title_activity_my_followers" >
+        </activity>
+        <activity
+            android:name="com.mobsquad.review.MyPostsActivity"
+            android:label="@string/title_activity_my_posts" >
+        </activity>
     </application>
 
 </manifest>
