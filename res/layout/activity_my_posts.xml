@@ -2,10 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black">
-    tools:context="com.mobsquad.review.MyProfileActivity$PlaceholderFragment">
+    android:background="@color/white">
 
-    <LinearLayout
+   <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -13,12 +12,21 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp">
+            android:layout_height="100dp"
+            android:background="#efefef">
+            
+            <FrameLayout 
+                android:layout_width="133px"
+                android:layout_height="133px"
+                android:layout_gravity="center">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:src="@drawable/avatar"/>
+                android:src="@drawable/avatar"
+                android:background="#cccccc"
+				android:padding="1dp"/>
+        	</FrameLayout>
         </FrameLayout>
 
         <TextView
@@ -27,17 +35,15 @@
             android:text="@string/header_name"
             android:layout_gravity="center"
             android:textStyle="bold"
-            android:textSize="25dp" />
+            android:textSize="18dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/description"
             android:layout_gravity="center"
-            android:textSize="17dp"
+            android:textSize="14dp"
             android:textColor="#FF707070"/>
-
-
 
         <LinearLayout
             android:orientation="vertical"
@@ -48,7 +54,9 @@
                 android:id="@+id/postsListView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal" 
+                android:divider="#00CCFF"
+    			android:dividerHeight="1px"/>
 
         </LinearLayout>
     </LinearLayout>

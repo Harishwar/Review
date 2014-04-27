@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black">
+    android:background="@color/white">
     <!--tools:context="com.mobsquad.review.MyProfileActivity$PlaceholderFragment">-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,12 +11,21 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp">
+            android:layout_height="150dp"
+            android:background="#efefef">
+            
+            <FrameLayout 
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:layout_gravity="center">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:src="@drawable/avatar"/>
+                android:src="@drawable/avatar"
+                android:background="#cccccc"
+				android:padding="1dp"/>
+        	</FrameLayout>
         </FrameLayout>
 
         <TextView
@@ -38,27 +47,43 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="2dp">
 
             <Button
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Posts"
-                android:onClick="openMyPosts"/>
+                android:onClick="openMyPosts"
+                android:textColor="#fff"
+                android:textStyle="bold" 
+                android:background="#00ccff"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"/>
+                        
             <Button
-                android:layout_weight="0"
+                android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Followers"
-                android:onClick="openMyFollowers"/>
+                android:onClick="openMyFollowers"
+                android:textColor="#fff"
+                android:textStyle="bold" 
+                android:background="#00ccff"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"/>
 
             <Button
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Interests"
-                android:onClick="openMyInterests"/>
+                android:onClick="openMyInterests"
+                android:textColor="#fff"
+                android:textStyle="bold" 
+                android:background="#00ccff"
+                />
 
         </LinearLayout>
     </LinearLayout>

@@ -107,11 +107,7 @@ public class DashboardActivity extends Activity implements OnQueryTextListener {
     	return super.onCreateOptionsMenu(menu);
     }
     
-    
-
-
-    
-	
+ 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         return super.onPrepareOptionsMenu(menu);

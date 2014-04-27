@@ -1,36 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black">
+    android:background="#fff" >
 
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:id="@+id/postImageView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="false"
-        android:src="@drawable/ford"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="false"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp" />
-
-    <TextView
+   <LinearLayout
+        android:id="@+id/listview_header"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Ford Description"
-        android:id="@+id/postDescriptionView"
-        android:layout_below="@+id/postImageView"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
-        android:background="@color/black"
-        android:textColor="@color/white" />
-</RelativeLayout>
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#eee"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/listview_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/postImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="320px"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true" 
+                android:src="@drawable/ford"/>
+
+            <TextView
+                android:id="@+id/postDescriptionView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/listview_review_image"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/listview_footer"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/listview_review_likeButton"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="25dp"
+                android:background="@android:drawable/ic_input_add"
+                android:text="" />
+            
+            <TextView
+                android:id="@+id/listview_review_likeCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/listview_review_likeButton"
+                android:layout_alignBottom="@+id/listview_review_likeButton"
+                android:layout_toRightOf="@+id/listview_review_likeButton"
+                android:text="101"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <Button
+                android:id="@+id/listview_review_commentButton"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@android:drawable/ic_menu_add"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/listview_review_likeButton"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/listview_review_commentCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/listview_review_commentButton"
+                android:layout_alignBottom="@+id/listview_review_commentButton"
+                android:layout_toRightOf="@+id/listview_review_commentButton"
+                android:text="10"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>
