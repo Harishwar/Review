@@ -30,7 +30,8 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true" />
+                android:layout_alignParentTop="true" 
+                android:src="@drawable/avatar" />
 
             <TextView
                 android:id="@+id/listview_username"
@@ -42,6 +43,7 @@
                 android:paddingLeft="16dp"
                 android:singleLine="true"
                 android:text="Username"
+                android:textColor="#000000"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
@@ -131,7 +133,8 @@
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
         </RelativeLayout>
-        
+
+
     </LinearLayout>
 
 </LinearLayout>

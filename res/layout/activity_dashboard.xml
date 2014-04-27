@@ -13,5 +13,38 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" />
+    
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
+            <ListView
+                android:id="@+id/postsListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" 
+                android:divider="#00CCFF"
+    			android:dividerHeight="0px"/>
+
+        </LinearLayout>
+        
+        <RelativeLayout
+            android:id="@+id/newReviewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:padding="6dp">
+            
+            <Button
+            android:id="@+id/newReviewButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Review" 
+        	android:background="#00ccff"
+        	android:onClick="newReviewButtonClick"
+        	android:textColor="#ffffff"
+        	android:textStyle="bold" 
+            android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
 </RelativeLayout>    

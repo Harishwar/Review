@@ -1,5 +1,8 @@
 package com.mobsquad.review;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.mobsquad.review.util.SystemUiHider;
 
 import android.annotation.TargetApi;
@@ -18,8 +21,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +39,8 @@ import android.widget.Toast;
 public class DashboardActivity extends Activity implements OnQueryTextListener {
 	
 	TextView mSearchText;
+	private List<Post> myPosts = new ArrayList<Post>();
+	
 	/**
 	 * Whether or not the system UI should be auto-hidden after
 	 * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -67,18 +76,34 @@ public class DashboardActivity extends Activity implements OnQueryTextListener {
 		ActionBar bar = getActionBar();
 		bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00ccff")));
 
-		
         mSearchText = new TextView(this);
         mSearchText.setPadding(10, 10, 10, 10);
         mSearchText.setText("Action Bar Usage");
 		setContentView(R.layout.activity_dashboard);
 
         //setContentView(mSearchText);
-
+		
+		populatePostList();
+        populateListView();
 
 	}
 
-	
+    private void populatePostList() {
+
+        myPosts.add(new Post("Ford",R.drawable.ford));
+        myPosts.add(new Post("Chevy",R.drawable.chevy));
+        myPosts.add(new Post("Buick",R.drawable.buick));
+        myPosts.add(new Post("Lamborgini",R.drawable.lamborgini));
+
+    }
+
+    private void populateListView() {
+
+        ArrayAdapter<Post> adapter = new MyListAdapter();
+        ListView list = (ListView) findViewById(R.id.postsListView);
+        list.setAdapter(adapter);
+
+    }
 	 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -135,5 +160,40 @@ public class DashboardActivity extends Activity implements OnQueryTextListener {
         mSearchText.setText("Searching for: " + query + "...");
         mSearchText.setTextColor(Color.RED);
         return true;
+    }
+    
+    private class MyListAdapter extends ArrayAdapter<Post>{
+
+        public MyListAdapter(){
+            super(DashboardActivity.this,R.layout.dashboard_listview,myPosts);
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent){
+            //Making sure we have a view to work with
+            View itemView = convertView;
+
+            if(itemView == null){
+
+                itemView = getLayoutInflater().inflate(R.layout.dashboard_listview,parent,false);
+
+            }
+
+            Post currentPost = myPosts.get(position);
+
+            ImageView imageView = (ImageView) itemView.findViewById(R.id.listview_review_image);
+            imageView.setImageResource(currentPost.getIconId());
+
+            TextView makeText = (TextView) itemView.findViewById(R.id.listview_review_content);
+            makeText.setText(currentPost.getDescription());
+
+            return itemView;
+        }
+
+    }
+    
+    public void newReviewButtonClick(View v) {
+        Intent intent = new Intent(this, NewReviewActivity.class);
+        startActivity(intent);
     }
 }
