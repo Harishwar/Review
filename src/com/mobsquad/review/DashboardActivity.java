@@ -21,6 +21,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
@@ -85,6 +86,7 @@ public class DashboardActivity extends Activity implements OnQueryTextListener {
 		
 		populatePostList();
         populateListView();
+        
 
 	}
 
@@ -96,6 +98,12 @@ public class DashboardActivity extends Activity implements OnQueryTextListener {
         myPosts.add(new Post("Lamborgini",R.drawable.lamborgini));
 
     }
+    
+    public void usernameClick(View v) {
+    	Intent intent = new Intent(this, UserProfileActivity.class);
+    	startActivity(intent);
+    }
+
 
     private void populateListView() {
 

@@ -40,7 +40,7 @@
         android:layout_alignParentBottom="true"
         android:background="#00ccff"
         android:onClick="newReviewClick"
-        android:text="Review"
+        android:text="Submit Review"
         android:textColor="#ffffff"
         android:textStyle="bold" />
 

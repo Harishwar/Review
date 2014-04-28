@@ -43,6 +43,8 @@
                 android:paddingLeft="16dp"
                 android:singleLine="true"
                 android:text="Username"
+                android:clickable="true"
+                android:onClick="usernameClick"
                 android:textColor="#000000"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 

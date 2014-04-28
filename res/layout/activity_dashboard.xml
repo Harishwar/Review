@@ -36,7 +36,7 @@
             android:orientation="vertical" 
             android:padding="6dp">
             
-            <Button
+       <Button
             android:id="@+id/newReviewButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
