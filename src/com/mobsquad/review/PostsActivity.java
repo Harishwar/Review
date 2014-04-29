@@ -21,7 +21,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class MyPostsActivity extends Activity {
+public class PostsActivity extends Activity {
 
     private List<Post> myPosts = new ArrayList<Post>();
 
@@ -77,7 +77,7 @@ public class MyPostsActivity extends Activity {
     private class MyListAdapter extends ArrayAdapter<Post>{
 
         public MyListAdapter(){
-            super(MyPostsActivity.this,R.layout.postlayout,myPosts);
+            super(PostsActivity.this,R.layout.postlayout,myPosts);
         }
 
         @Override

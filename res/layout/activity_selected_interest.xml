@@ -48,7 +48,6 @@
          android:layout_marginBottom="12dp"
          android:background="#00ccff"
          android:layout_alignParentBottom="true"
-         
          android:onClick="interestSelectedClick"
          android:text="Go to HomePage"
          android:textColor="#fff"
@@ -56,6 +55,4 @@
 
         </LinearLayout>
         
-        
-
     </FrameLayout>

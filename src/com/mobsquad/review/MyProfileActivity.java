@@ -34,7 +34,7 @@ public class MyProfileActivity extends Activity {
     public void openMyPosts(View view){
 
         //Open Posts Activity
-        Intent intent = new Intent(this, MyPostsActivity.class);
+        Intent intent = new Intent(this, PostsActivity.class);
         startActivity(intent);
 
     }

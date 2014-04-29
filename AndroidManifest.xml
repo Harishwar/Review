@@ -81,7 +81,7 @@
             android:label="@string/title_activity_my_followers" >
         </activity>
         <activity
-            android:name="com.mobsquad.review.MyPostsActivity"
+            android:name="com.mobsquad.review.PostsActivity"
             android:label="@string/title_activity_my_posts" >
         </activity>
         <activity
